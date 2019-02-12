@@ -68,7 +68,6 @@
       "OBJ_1" = {
          isa = "PBXProject";
          attributes = {
-            LastSwiftMigration = "9999";
             LastUpgradeCheck = "9999";
          };
          buildConfigurationList = "OBJ_2";
@@ -120,8 +119,8 @@
       "OBJ_14" = {
          isa = "PBXGroup";
          children = (
-            "CMToolKit::CMToolKit::Product",
-            "CMToolKit::CMToolKitTests::Product"
+            "CMToolKit::CMToolKitTests::Product",
+            "CMToolKit::CMToolKit::Product"
          );
          name = "Products";
          path = "";
@@ -148,12 +147,10 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "CMToolKit.xcodeproj/CMToolKit_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
             );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -170,10 +167,8 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "CMToolKit";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
@@ -198,12 +193,10 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "CMToolKit.xcodeproj/CMToolKit_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
             );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -220,10 +213,8 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "CMToolKit";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
@@ -257,15 +248,15 @@
             LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
                "-swift-version",
-               "5",
+               "4.2",
                "-I",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
                "-target",
                "x86_64-apple-macosx10.10",
                "-sdk",
-               "/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
          };
          name = "Debug";
       };
@@ -275,15 +266,15 @@
             LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
                "-swift-version",
-               "5",
+               "4.2",
                "-I",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
                "-target",
                "x86_64-apple-macosx10.10",
                "-sdk",
-               "/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
          };
          name = "Release";
       };
@@ -308,10 +299,10 @@
             ENABLE_NS_ASSERTIONS = "YES";
             GCC_OPTIMIZATION_LEVEL = "0";
             GCC_PREPROCESSOR_DEFINITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE=1",
-               "DEBUG=1"
+               "DEBUG=1",
+               "$(inherited)"
             );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
             ONLY_ACTIVE_ARCH = "YES";
             OTHER_SWIFT_FLAGS = (
                "-DXcode"
@@ -328,7 +319,6 @@
                "watchsimulator"
             );
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)",
                "SWIFT_PACKAGE",
                "DEBUG"
             );
@@ -384,13 +374,11 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "CMToolKit.xcodeproj/CMToolKitTests_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "@loader_path/../Frameworks",
                "@loader_path/Frameworks"
             );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -403,10 +391,8 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "CMToolKitTests";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
@@ -423,13 +409,11 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "CMToolKit.xcodeproj/CMToolKitTests_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "@loader_path/../Frameworks",
                "@loader_path/Frameworks"
             );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -442,10 +426,8 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "5.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "CMToolKitTests";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
@@ -465,10 +447,7 @@
             DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
             DYLIB_INSTALL_NAME_BASE = "@rpath";
             GCC_OPTIMIZATION_LEVEL = "s";
-            GCC_PREPROCESSOR_DEFINITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE=1"
-            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_SWIFT_FLAGS = (
                "-DXcode"
             );
@@ -484,7 +463,6 @@
                "watchsimulator"
             );
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)",
                "SWIFT_PACKAGE"
             );
             SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
