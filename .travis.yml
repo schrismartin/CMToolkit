@@ -6,4 +6,3 @@ before_install:
   - bundle install --without=documentation
 script:
   - xcodebuild test -scheme CMToolKit-Package -enableCodeCoverage YES | bundle exec xcpretty
-  - bundle exec slather coverage
