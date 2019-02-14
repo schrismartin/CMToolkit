@@ -1,0 +1,8 @@
+os: osx
+osx_image: xcode10.1
+language: objective-c
+cache: bundler
+before_install:
+  - bundle install --without=documentation
+script:
+  - xcodebuild test -scheme CMToolKit-Package -enableCodeCoverage YES | bundle exec xcpretty
