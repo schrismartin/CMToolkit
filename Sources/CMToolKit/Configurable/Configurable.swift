@@ -25,4 +25,4 @@
 import Foundation
 
 /// Decorator protocol providing convenience functions for configuring objects.
-typealias Configurable = Transformable & SingleValueSettable
+public typealias Configurable = Transformable & SingleValueSettable
