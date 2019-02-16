@@ -22,6 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		B433C11922188C6F00C8D1DD /* TimeIntervalIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */; };
+		B433C11B221890FF00C8D1DD /* Optional+Unwrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */; };
+		B433C11D2218970200C8D1DD /* OptionalUnwrappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11C2218970200C8D1DD /* OptionalUnwrappingTests.swift */; };
+		B433C11F221899A000C8D1DD /* URL+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11E221899A000C8D1DD /* URL+Convenience.swift */; };
 		B456E7F222151A2700A5D294 /* ConfigurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4461D2215199800F17A11 /* ConfigurableTests.swift */; };
 		B456E7F422151A8C00A5D294 /* SingleValueSettableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */; };
 		B456E7F62215A55100A5D294 /* TransformableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F52215A55100A5D294 /* TransformableTests.swift */; };
@@ -53,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalIntervalTests.swift; sourceTree = "<group>"; };
+		B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrapped.swift"; sourceTree = "<group>"; };
+		B433C11C2218970200C8D1DD /* OptionalUnwrappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalUnwrappingTests.swift; sourceTree = "<group>"; };
+		B433C11E221899A000C8D1DD /* URL+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Convenience.swift"; sourceTree = "<group>"; };
 		B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueSettableTests.swift; sourceTree = "<group>"; };
 		B456E7F52215A55100A5D294 /* TransformableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformableTests.swift; sourceTree = "<group>"; };
 		B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Intervals.swift"; sourceTree = "<group>"; };
@@ -85,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B433C12022189E4800C8D1DD /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+		B433C12122189E5700C8D1DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */,
+				B433C11E221899A000C8D1DD /* URL+Convenience.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B4C446112215168D00F17A11 /* Configurable */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +134,7 @@
 				B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */,
 				B456E7F52215A55100A5D294 /* TransformableTests.swift */,
 				B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */,
+				B433C11C2218970200C8D1DD /* OptionalUnwrappingTests.swift */,
 			);
 			name = CMToolKitTests;
 			path = Tests/CMToolKitTests;
@@ -147,7 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				B4C446112215168D00F17A11 /* Configurable */,
-				B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */,
+				B433C12022189E4800C8D1DD /* Presets */,
+				B433C12122189E5700C8D1DD /* Extensions */,
 			);
 			name = CMToolKit;
 			path = Sources/CMToolKit;
@@ -236,9 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B433C11B221890FF00C8D1DD /* Optional+Unwrapped.swift in Sources */,
 				B4C4460B2214F9BE00F17A11 /* Configurable.swift in Sources */,
 				B4C4460F2214FEA300F17A11 /* SingleValueSettable.swift in Sources */,
 				B456E7FA221879BF00A5D294 /* TimeInterval+Intervals.swift in Sources */,
+				B433C11F221899A000C8D1DD /* URL+Convenience.swift in Sources */,
 				B4C4460D2214F9CB00F17A11 /* Transformable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +287,7 @@
 				B456E7F222151A2700A5D294 /* ConfigurableTests.swift in Sources */,
 				B456E7F62215A55100A5D294 /* TransformableTests.swift in Sources */,
 				OBJ_41 /* XCTestManifests.swift in Sources */,
+				B433C11D2218970200C8D1DD /* OptionalUnwrappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
