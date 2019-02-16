@@ -25,6 +25,7 @@
 		B433C11B221890FF00C8D1DD /* Optional+Unwrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */; };
 		B433C11D2218970200C8D1DD /* OptionalUnwrappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11C2218970200C8D1DD /* OptionalUnwrappingTests.swift */; };
 		B433C11F221899A000C8D1DD /* URL+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11E221899A000C8D1DD /* URL+Convenience.swift */; };
+		B433C1232218A33200C8D1DD /* Sequence+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C1222218A33200C8D1DD /* Sequence+Convenience.swift */; };
 		B456E7F222151A2700A5D294 /* ConfigurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4461D2215199800F17A11 /* ConfigurableTests.swift */; };
 		B456E7F422151A8C00A5D294 /* SingleValueSettableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */; };
 		B456E7F62215A55100A5D294 /* TransformableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F52215A55100A5D294 /* TransformableTests.swift */; };
@@ -59,6 +60,7 @@
 		B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrapped.swift"; sourceTree = "<group>"; };
 		B433C11C2218970200C8D1DD /* OptionalUnwrappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalUnwrappingTests.swift; sourceTree = "<group>"; };
 		B433C11E221899A000C8D1DD /* URL+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Convenience.swift"; sourceTree = "<group>"; };
+		B433C1222218A33200C8D1DD /* Sequence+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Convenience.swift"; sourceTree = "<group>"; };
 		B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueSettableTests.swift; sourceTree = "<group>"; };
 		B456E7F52215A55100A5D294 /* TransformableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformableTests.swift; sourceTree = "<group>"; };
 		B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Intervals.swift"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				B433C11A221890FF00C8D1DD /* Optional+Unwrapped.swift */,
 				B433C11E221899A000C8D1DD /* URL+Convenience.swift */,
+				B433C1222218A33200C8D1DD /* Sequence+Convenience.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				B433C11B221890FF00C8D1DD /* Optional+Unwrapped.swift in Sources */,
 				B4C4460B2214F9BE00F17A11 /* Configurable.swift in Sources */,
+				B433C1232218A33200C8D1DD /* Sequence+Convenience.swift in Sources */,
 				B4C4460F2214FEA300F17A11 /* SingleValueSettable.swift in Sources */,
 				B456E7FA221879BF00A5D294 /* TimeInterval+Intervals.swift in Sources */,
 				B433C11F221899A000C8D1DD /* URL+Convenience.swift in Sources */,
