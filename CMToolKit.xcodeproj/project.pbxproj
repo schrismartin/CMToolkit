@@ -21,9 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B433C11922188C6F00C8D1DD /* TimeIntervalIntervalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */; };
 		B456E7F222151A2700A5D294 /* ConfigurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4461D2215199800F17A11 /* ConfigurableTests.swift */; };
 		B456E7F422151A8C00A5D294 /* SingleValueSettableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */; };
 		B456E7F62215A55100A5D294 /* TransformableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F52215A55100A5D294 /* TransformableTests.swift */; };
+		B456E7FA221879BF00A5D294 /* TimeInterval+Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */; };
 		B4C4460B2214F9BE00F17A11 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4460A2214F9BE00F17A11 /* Configurable.swift */; };
 		B4C4460D2214F9CB00F17A11 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4460C2214F9CB00F17A11 /* Transformable.swift */; };
 		B4C4460F2214FEA300F17A11 /* SingleValueSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4460E2214FEA300F17A11 /* SingleValueSettable.swift */; };
@@ -50,8 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalIntervalTests.swift; sourceTree = "<group>"; };
 		B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueSettableTests.swift; sourceTree = "<group>"; };
 		B456E7F52215A55100A5D294 /* TransformableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformableTests.swift; sourceTree = "<group>"; };
+		B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Intervals.swift"; sourceTree = "<group>"; };
 		B4C4460A2214F9BE00F17A11 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		B4C4460C2214F9CB00F17A11 /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
 		B4C4460E2214FEA300F17A11 /* SingleValueSettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueSettable.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				B4C4461D2215199800F17A11 /* ConfigurableTests.swift */,
 				B456E7F322151A8C00A5D294 /* SingleValueSettableTests.swift */,
 				B456E7F52215A55100A5D294 /* TransformableTests.swift */,
+				B433C11822188C6F00C8D1DD /* TimeIntervalIntervalTests.swift */,
 			);
 			name = CMToolKitTests;
 			path = Tests/CMToolKitTests;
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C446112215168D00F17A11 /* Configurable */,
+				B456E7F9221879BF00A5D294 /* TimeInterval+Intervals.swift */,
 			);
 			name = CMToolKit;
 			path = Sources/CMToolKit;
@@ -232,6 +238,7 @@
 			files = (
 				B4C4460B2214F9BE00F17A11 /* Configurable.swift in Sources */,
 				B4C4460F2214FEA300F17A11 /* SingleValueSettable.swift in Sources */,
+				B456E7FA221879BF00A5D294 /* TimeInterval+Intervals.swift in Sources */,
 				B4C4460D2214F9CB00F17A11 /* Transformable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B433C11922188C6F00C8D1DD /* TimeIntervalIntervalTests.swift in Sources */,
 				B456E7F422151A8C00A5D294 /* SingleValueSettableTests.swift in Sources */,
 				B456E7F222151A2700A5D294 /* ConfigurableTests.swift in Sources */,
 				B456E7F62215A55100A5D294 /* TransformableTests.swift in Sources */,
