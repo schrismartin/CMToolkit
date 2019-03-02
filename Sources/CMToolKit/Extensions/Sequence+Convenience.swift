@@ -58,25 +58,4 @@ public extension Sequence {
             first[keyPath: keyPath] < second[keyPath: keyPath]
         }
     }
-    
-    /// Returns an array containing, in order, the elements of the sequence
-    /// where the property at the keyPath equals the provided value.
-    ///
-    /// In this example, `filter(_:)` is used to include only names equaling
-    /// five characters.
-    ///
-    ///     let cast = ["Vivien", "Marlon", "Kim", "Karol", "Chris"]
-    ///     let shortNames = cast.filter(where: \.count, equals: 5)
-    ///     print(shortNames)
-    ///     // Prints "["Karol", "Chris"]"
-    ///
-    /// - Parameters:
-    ///   - keyPath: A keyPath pointing to the property to be compared.
-    ///   - other: The expected value of the value at the keyPath.
-    /// - Returns: An array of the elements matching the equality comparison.
-    ///
-    /// - Complexity: O(*n*), where *n* is the length of the sequence.
-    public func filter<T: Equatable>(where keyPath: KeyPath<Element, T>, equals other: T) -> [Element] {
-        return filter { $0[keyPath: keyPath] == other }
-    }
 }
