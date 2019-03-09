@@ -23,7 +23,7 @@
 //
 
 import XCTest
-import CMToolKit
+import CMToolkit
 
 class TimeIntervalIntervalTests: XCTestCase {
 

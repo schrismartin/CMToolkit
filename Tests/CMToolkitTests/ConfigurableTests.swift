@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>FILEHEADER</key>
-	<string>
-//  ___FILENAME___
 //
-//  Copyright (c) 2019 ___FULLUSERNAME___. Licensed under the MIT license, as follows:
+//  ConfigurableTests.swift
+//
+//  Copyright (c) 2019 Chris Martin. Licensed under the MIT license, as follows:
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the &quot;Software&quot;), to deal
+//  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //  copies of the Software, and to permit persons to whom the Software is
@@ -18,13 +13,27 @@
 //  The above copyright notice and this permission notice shall be included in all
 //  copies or substantial portions of the Software.
 //
-//  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
-//</string>
-</dict>
-</plist>
+//
+
+import XCTest
+import CMToolkit
+
+final class ConfigurableTests: XCTestCase {
+    
+    struct TestObject: Configurable { }
+    
+    func testConfigurableProtocolComposition() {
+        
+        let instance = TestObject() as Any
+        XCTAssertTrue(instance is Configurable)
+        XCTAssertTrue(instance is SingleValueSettable)
+        XCTAssertTrue(instance is Transformable)
+    }
+}
