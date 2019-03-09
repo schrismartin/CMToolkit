@@ -23,7 +23,7 @@
 //
 
 import XCTest
-import CMStandardLibAdditions
+import CMToolkit
 
 class SequenceConvenienceTests: XCTestCase {
     
