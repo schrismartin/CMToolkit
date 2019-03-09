@@ -23,7 +23,7 @@
 //
 
 import XCTest
-import CMToolKit
+import CMStandardLibAdditions
 
 class OptionalUnwrappingTests: XCTestCase {
     

@@ -23,11 +23,11 @@
 //
 
 import XCTest
-import CMToolKit
+import CMStandardLibAdditions
 
-class SingleValueSettableTests: XCTestCase {
+class TransformableTests: XCTestCase {
     
-    struct TestObject: SingleValueSettable {
+    struct TestObject: Transformable {
         var testValue: Int
         var testSequence: [Int]
         var testClass: MyClass
@@ -43,74 +43,36 @@ class SingleValueSettableTests: XCTestCase {
             testClass: MyClass(value: 18)
         )
     }
-
-    func testSetting() {
+    
+    func testTransforming() {
         
         // Test value setting
-        let eleven = TestObject.test.setting(
-            keyPath: \.testValue,
-            to: 11
-        )
+        let eleven = TestObject.test
+            .applying { $0.testValue = 11 }
         
         XCTAssertEqual(eleven.testValue, 11)
         
         // Test sequence setting (should be the same)
-        let sequence = TestObject.test.setting(
-            keyPath: \.testSequence,
-            to: [5, 4, 3, 2, 1]
-        )
+        let sequence = TestObject.test
+            .applying { $0.testSequence = [5, 4, 3, 2, 1] }
         
         XCTAssertEqual(sequence.testSequence, [5, 4, 3, 2, 1])
         
         // Test Class setting
-        let newClass = TestObject.test.setting(
-            keyPath: \.testClass,
-            to: TestObject.MyClass(value: 25)
-        )
+        let newClass = TestObject.test
+            .applying { $0.testClass = TestObject.MyClass(value: 25) }
         
         XCTAssertEqual(newClass.testClass.value, 25)
         XCTAssertEqual(TestObject.test.testClass.value, 18)
         
         // Test Class modification
         let newClassValue = newClass
-            .setting(keyPath: \.testClass.value, to: 30)
+            .applying { $0.testClass.value = 30 }
         
         XCTAssertEqual(newClassValue.testClass.value, 30)
         
         // Since MyClass is a reference type, modification within should also
         // expect to apply to any other references.
         XCTAssertEqual(newClass.testClass.value, 30)
-    }
-    
-    func testMapValue() {
-        
-        // Test value mapping
-        let eleven = TestObject.test
-            .mapValue(at: \.testValue) { $0 + 1 }
-        
-        XCTAssertEqual(eleven.testValue, 11)
-        
-        // Test sequence mapping
-        let sequence = TestObject.test
-            .mapValue(at: \.testSequence) { $0 + [6, 7, 8, 9, 10] }
-        
-        XCTAssertEqual(sequence.testSequence, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-        
-        // Test Class setting
-        let newClass = TestObject.test
-            .mapValue(at: \.testClass) { TestObject.MyClass(value: $0.value + 1) }
-        
-        XCTAssertEqual(newClass.testClass.value, 19)
-        XCTAssertEqual(TestObject.test.testClass.value, 18)
-        
-        // Test Class modification
-        let newClassValue = newClass
-            .mapValue(at: \.testClass.value) { $0 + 1 }
-        
-        XCTAssertEqual(newClassValue.testClass.value, 20)
-        
-        // Since MyClass is a reference type, modification within should also
-        // expect to apply to any other references.
-        XCTAssertEqual(newClass.testClass.value, 20)
     }
 }
