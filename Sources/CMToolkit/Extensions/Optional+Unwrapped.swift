@@ -48,7 +48,7 @@ public extension Optional {
     /// - Throws:
     ///   - Provided error, if available
     ///   - `Optional<Wrapped>.Error.optionalUnwrappingFailure` if unwrap fails
-    public func unwrapped(
+    func unwrapped(
         throwing error: Swift.Error? = nil,
         file: StaticString = #file,
         line: UInt = #line
@@ -85,7 +85,7 @@ public extension Optional {
     ///   - Provided error, if available
     ///   - `Optional<Wrapped>.Error.optionalUnwrappingFailure` if unwrap fails
     ///   - `Optional<Wrapped>.Error.castingFailure` if casting fails
-    public func unwrapped<T>(
+    func unwrapped<T>(
         as other: T.Type,
         throwing error: Swift.Error? = nil,
         file: StaticString = #file,
@@ -104,7 +104,7 @@ public extension Optional {
     ///
     /// - optionalUnwrappingFailure: The value failed to be unwrapped (was nil)
     /// - castingFailure: The value was unable to be casted to the intended type
-    public enum Error: Swift.Error, CustomDebugStringConvertible {
+    enum Error: Swift.Error, CustomDebugStringConvertible {
         
         /// The value failed to be unwrapped (was nil)
         case optionalUnwrappingFailure(file: StaticString, line: UInt)

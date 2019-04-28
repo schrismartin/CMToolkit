@@ -40,7 +40,7 @@ public extension Sequence {
     ///   sequence.
     ///
     /// - Complexity: O(*n*), where *n* is the length of the sequence.
-    public func map<T>(to keyPath: KeyPath<Element, T>) -> [T] {
+    func map<T>(to keyPath: KeyPath<Element, T>) -> [T] {
         return map { $0[keyPath: keyPath] }
     }
     
@@ -53,7 +53,7 @@ public extension Sequence {
     ///
     /// - Parameter keyPath: KeyPath pointing at the comparable operands
     /// - Returns: Array of elements sorted by the operands at the keyPath
-    public func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>) -> [Element] {
+    func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>) -> [Element] {
         return sorted { first, second in
             first[keyPath: keyPath] < second[keyPath: keyPath]
         }

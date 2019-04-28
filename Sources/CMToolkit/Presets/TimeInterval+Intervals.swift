@@ -35,7 +35,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of seconds.
     /// - Returns: The number of seconds equivalent to the provided number of seconds.
-    public static func seconds(_ count: Int) -> TimeInterval {
+    static func seconds(_ count: Int) -> TimeInterval {
         return TimeInterval(count)
     }
     
@@ -48,7 +48,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of minutes.
     /// - Returns: The number of seconds equivalent to the provided number of minutes.
-    public static func minutes(_ count: Int) -> TimeInterval {
+    static func minutes(_ count: Int) -> TimeInterval {
         return .seconds(60 * count)
     }
     
@@ -61,7 +61,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of hours.
     /// - Returns: The number of seconds equivalent to the provided number of hours.
-    public static func hours(_ count: Int) -> TimeInterval {
+    static func hours(_ count: Int) -> TimeInterval {
         return .minutes(60 * count)
     }
     
@@ -74,7 +74,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of days.
     /// - Returns: The number of seconds equivalent to the provided number of days.
-    public static func days(_ count: Int) -> TimeInterval {
+    static func days(_ count: Int) -> TimeInterval {
         return .hours(24 * count)
     }
     
@@ -87,7 +87,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of weeks.
     /// - Returns: The number of seconds equivalent to the provided number of weeks.
-    public static func weeks(_ count: Int) -> TimeInterval {
+    static func weeks(_ count: Int) -> TimeInterval {
         return .days(7 * count)
     }
     
@@ -100,7 +100,7 @@ public extension TimeInterval {
     ///
     /// - Parameter count: The number of years.
     /// - Returns: The number of seconds equivalent to the provided number of years.
-    public static func years(_ count: Int) -> TimeInterval {
+    static func years(_ count: Int) -> TimeInterval {
         return .days(365 * count)
     }
 }

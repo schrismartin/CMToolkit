@@ -69,7 +69,7 @@ public extension Transformable {
     /// - Returns: Modified version of the calling object after applying the
     ///            transform
     /// - Throws: Error thrown within transform function
-    public func applying(transform: (inout Self) throws -> Void) rethrows -> Self {
+    func applying(transform: (inout Self) throws -> Void) rethrows -> Self {
         
         var mutableSelf = self
         try transform(&mutableSelf)

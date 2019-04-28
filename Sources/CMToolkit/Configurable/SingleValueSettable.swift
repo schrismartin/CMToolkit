@@ -40,13 +40,13 @@ public extension SingleValueSettable {
     ///   - keyPath: KeyPath of the property being modified
     ///   - newValue: Value replacing the old value at the KeyPath.
     /// - Returns: Modified version of the calling object
-    public func setting<T>(
+    func setting<T>(
         keyPath: WritableKeyPath<Self, T>,
-        to newValue: T
-    ) -> Self {
+        to newValue: @autoclosure () throws -> T
+    ) rethrows -> Self {
         
         var mutableSelf = self
-        mutableSelf[keyPath: keyPath] = newValue
+        mutableSelf[keyPath: keyPath] = try newValue()
         return mutableSelf
     }
     
@@ -64,7 +64,7 @@ public extension SingleValueSettable {
     /// - Returns: Modified version of the calling object after applying the
     ///            transform to the property at the keyPath
     /// - Throws: Error throw within transform function
-    public func mapValue<T>(
+    func mapValue<T>(
         at keyPath: WritableKeyPath<Self, T>,
         handler: (T) throws -> T
     ) rethrows -> Self {
