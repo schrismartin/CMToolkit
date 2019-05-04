@@ -33,7 +33,7 @@ public extension URL {
     /// it is considered to be direct developer error.
     ///
     /// - Parameter staticString: URL provided in source code.
-    public init(staticString: StaticString) {
+    init(staticString: StaticString) {
         let urlString = String(staticString: staticString)
         self.init(string: urlString)!
     }
@@ -44,7 +44,7 @@ public extension String {
     /// Create a String using a StaticString
     ///
     /// - Parameter staticString: String to be converted.
-    public init(staticString: StaticString) {
+    init(staticString: StaticString) {
         self = staticString.withUTF8Buffer {
             String(decoding: $0, as: UTF8.self)
         }

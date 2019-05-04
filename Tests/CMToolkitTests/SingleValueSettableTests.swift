@@ -31,20 +31,26 @@ class SingleValueSettableTests: XCTestCase {
         var testValue: Int
         var testSequence: [Int]
         var testClass: MyClass
+        var json: JSONType
         
         class MyClass {
             var value: Int
             init(value: Int) { self.value = value }
         }
         
+        struct JSONType: Codable {
+            var value: Int
+        }
+        
         static let test = TestObject(
             testValue: 10,
             testSequence: [1, 2, 3, 4, 5],
-            testClass: MyClass(value: 18)
+            testClass: MyClass(value: 18),
+            json: JSONType(value: 42)
         )
     }
 
-    func testSetting() {
+    func testSettingValueTypes() {
         
         // Test value setting
         let eleven = TestObject.test.setting(
@@ -53,6 +59,9 @@ class SingleValueSettableTests: XCTestCase {
         )
         
         XCTAssertEqual(eleven.testValue, 11)
+    }
+    
+    func testSettingSequences() {
         
         // Test sequence setting (should be the same)
         let sequence = TestObject.test.setting(
@@ -61,6 +70,9 @@ class SingleValueSettableTests: XCTestCase {
         )
         
         XCTAssertEqual(sequence.testSequence, [5, 4, 3, 2, 1])
+    }
+    
+    func testSettingReferenceTypes() {
         
         // Test Class setting
         let newClass = TestObject.test.setting(
@@ -82,19 +94,52 @@ class SingleValueSettableTests: XCTestCase {
         XCTAssertEqual(newClass.testClass.value, 30)
     }
     
-    func testMapValue() {
+    func testSettingThrowingObject() {
+        
+        struct JSONType: Codable {
+            var value: Int
+        }
+        
+        // Assert No Throws
+        let validJson = #"{"value":1}"#.data(using: .utf8)!
+        XCTAssertNoThrow(try TestObject.test.setting(
+            keyPath: \.json,
+            to: try JSONDecoder().decode(
+                TestObject.JSONType.self,
+                from: validJson
+            ))
+        )
+        
+        // Assert Throws
+        let invalidJson = #"{"value":"hey"}"#.data(using: .utf8)!
+        XCTAssertThrowsError(try TestObject.test.setting(
+            keyPath: \.json,
+            to: try JSONDecoder().decode(
+                TestObject.JSONType.self,
+                from: invalidJson
+            )
+        ))
+    }
+    
+    func testMapValueTypes() {
         
         // Test value mapping
         let eleven = TestObject.test
             .mapValue(at: \.testValue) { $0 + 1 }
         
         XCTAssertEqual(eleven.testValue, 11)
+    }
+    
+    func testMapSequences() {
         
         // Test sequence mapping
         let sequence = TestObject.test
             .mapValue(at: \.testSequence) { $0 + [6, 7, 8, 9, 10] }
         
         XCTAssertEqual(sequence.testSequence, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    }
+    
+    func testMapReferenceTypes() {
         
         // Test Class setting
         let newClass = TestObject.test
