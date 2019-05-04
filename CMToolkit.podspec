@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CMToolkit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A collection of tools, utilities, and helpers augmenting the Swift standard library.'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Chris Martin' => 'schrismartin@me.com' }
   s.source           = { :git => 'https://github.com/schrismartin/CMToolkit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/schrismartin'
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.0'
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Sources/**/*'
